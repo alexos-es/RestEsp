@@ -1,0 +1,57 @@
+:root {
+  color: #292a28;
+  background: #fff;
+  font: 1rem/1.65 Arial, sans-serif;
+  --antracita: #292a28;
+  --oro: #c5a15b;
+  --linea: #dedbd4;
+}
+* { box-sizing: border-box; }
+body { margin: 0; container-type: inline-size; }
+a { color: inherit; text-underline-offset: .25em; }
+a:focus-visible { outline: 3px solid var(--oro); outline-offset: 4px; }
+.skip { position: absolute; z-index: 2; left: 1rem; top: 1rem; padding: .65rem; background: #fff; transform: translateY(-200%); }
+.skip:focus { transform: none; }
+.contenedor { width: min(calc(100% - 3rem), 71rem); margin-inline: auto; }
+.cabecera { border-bottom: 1px solid var(--linea); }
+.barra { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .5rem 2rem; padding-block: 1.2rem; }
+nav { display: flex; flex-wrap: wrap; gap: .4rem 1.35rem; }
+nav a, .marca { text-decoration: none; }
+nav a:hover, .marca:hover { text-decoration: underline; }
+.marca { font-weight: 700; }
+.portada {
+  margin-inline: calc(-1 * max(1.5rem, (100cqw - 71rem) / 2));
+  min-height: clamp(30rem, 70svh, 45rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(7rem, 12rem);
+  align-items: end;
+  gap: 2rem;
+  padding: clamp(3rem, 8vw, 7rem) max(1.5rem, calc((100cqw - 71rem) / 2));
+  color: #fff;
+  background: linear-gradient(90deg, rgba(24,25,23,.88), rgba(24,25,23,.24)),
+              linear-gradient(0deg, rgba(24,25,23,.67), transparent 65%),
+              url("./toledo.jpg") center 46% / cover no-repeat, var(--antracita);
+  border-bottom: 3px solid var(--oro);
+}
+h1, h2, h3 { line-height: 1.14; }
+h1 { max-width: 12ch; font-size: clamp(2.4rem, 7vw, 6.2rem); letter-spacing: -.055em; margin: 0; font-weight: 400; }
+h1::before { content: ""; display: block; width: 2.8rem; height: 2px; margin-bottom: 1.3rem; background: var(--oro); }
+.lema { margin: 1rem 0 1.65rem; font-size: clamp(1rem, 2vw, 1.25rem); }
+.boton { display: inline-block; padding: .55rem 1rem; border: 1px solid #f6f1e4; text-decoration: none; }
+.boton:hover { background: #fff; color: var(--antracita); }
+.emblema { justify-self: end; width: min(100%, 12rem); padding: .85rem; background: rgba(41,42,40,.85); }
+.emblema img { display: block; width: 100%; height: auto; }
+section:not(.portada) { padding-block: 2.35rem; scroll-margin: 1rem; }
+section:not(.portada) + section { border-top: 1px solid var(--linea); }
+#proyecto, #contacto { padding-block: clamp(2.5rem, 5vw, 4.25rem); }
+h2 { margin: 0 0 .8rem; font-size: clamp(1.5rem, 3vw, 2.3rem); font-weight: 400; letter-spacing: -.035em; }
+h3 { font-size: 1rem; }
+section p, dl { max-width: 68ch; }
+dt { font-weight: 700; }
+dd { margin: 0 0 .65rem; overflow-wrap: anywhere; }
+.pie { padding-block: .7rem 1.2rem; color: #fff; background: var(--antracita); }
+.creditos { margin-block: 0; font-size: .82rem; color: #e0dacf; }
+@media (max-width: 42rem) {
+  .portada { grid-template-columns: 1fr; align-content: end; background-position: center, center, 58% center; }
+  .emblema { grid-row: 1; justify-self: start; width: 8rem; }
+}
