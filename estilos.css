@@ -1,0 +1,26 @@
+:root { color: #292a28; background: #fff; font: 1rem/1.6 Arial, sans-serif; --oro: #c5a15b; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; text-underline-offset: .22em; }
+a:focus-visible { outline: 3px solid var(--oro); outline-offset: 4px; }
+.skip { position: absolute; left: 1rem; top: 1rem; padding: .6rem; background: white; transform: translateY(-200%); }
+.skip:focus { transform: none; }
+.contenedor { width: min(calc(100% - 2.5rem), 70rem); margin-inline: auto; }
+.cabecera { border-bottom: 1px solid #dedbd4; }
+.barra { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .6rem 2rem; padding-block: 1rem; }
+nav { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; }
+.marca { font-weight: bold; }
+.portada { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(1.5rem, 6vw, 5rem); padding-block: clamp(3rem, 9vw, 8rem); }
+h1, h2, h3 { line-height: 1.15; }
+h1 { font-size: clamp(2.6rem, 6.5vw, 5.6rem); letter-spacing: -.055em; margin: 0; font-weight: 400; }
+h2 { font-size: clamp(1.55rem, 3vw, 2.25rem); margin-top: 0; }
+.lema { font-size: 1.2rem; }
+.boton { display: inline-block; background: #292a28; color: white; padding: .65rem 1.15rem; border-bottom: 3px solid var(--oro); }
+.emblema { background: #292a28; border-bottom: 3px solid var(--oro); padding: clamp(1.25rem, 5vw, 3.5rem); }
+.emblema img { display: block; width: 100%; height: auto; }
+section + section { border-top: 1px solid #dedbd4; padding-block: 2rem; }
+section p, dl { max-width: 68ch; }
+dt { font-weight: bold; }
+dd { margin: 0 0 .7rem; }
+.pie { background: #292a28; color: #fff; }
+@media (max-width: 48rem) { .portada { grid-template-columns: 1fr; } }
