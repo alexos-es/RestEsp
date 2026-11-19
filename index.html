@@ -3,21 +3,79 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Restauración Española. Próximamente.">
+  <meta name="description" content="Restauración Española. Tradición, patria y bien común. Próximamente.">
+  <meta name="theme-color" content="#292A28">
   <title>Restauración Española</title>
   <style>
-    :root { background: #f4efe6; color: #252b24; font-family: system-ui, sans-serif; }
-    body { margin: 0; min-height: 100vh; min-height: 100svh; display: grid; place-items: center; }
-    main { box-sizing: border-box; width: min(100%, 70rem); padding: clamp(1.5rem, 7vw, 6rem); }
-    h1 { margin: 0; font: 400 clamp(2.2rem, 8.5vw, 7.5rem)/1 Georgia, serif; letter-spacing: -.05em; }
-    h1 span { display: block; }
-    p { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid #8d775e; color: #564738; }
+    :root {
+      color-scheme: light;
+      --antracita: #292a28;
+      --oro-viejo: #c5a15b;
+      color: var(--antracita);
+      background: #fff;
+      font-family: Arial, sans-serif;
+    }
+    body { margin: 0; }
+    main {
+      box-sizing: border-box;
+      width: min(100%, 76rem);
+      min-height: 100vh;
+      min-height: 100svh;
+      margin-inline: auto;
+      padding: clamp(1.25rem, 5vw, 4.5rem);
+      display: grid;
+      place-items: center;
+    }
+    .portada {
+      width: 100%;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+      gap: clamp(2rem, 7vw, 6rem);
+      align-items: center;
+    }
+    .marca {
+      border-bottom: 3px solid var(--oro-viejo);
+      background: var(--antracita);
+      display: grid;
+      place-items: center;
+      padding: clamp(1.5rem, 5vw, 4.5rem);
+    }
+    .marca img { display: block; width: 100%; max-width: 32rem; height: auto; }
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 4.5rem);
+      font-weight: 400;
+      letter-spacing: -0.045em;
+      line-height: 1.03;
+    }
+    .lema { margin: 1.25rem 0 0; font-size: clamp(1rem, 2vw, 1.25rem); line-height: 1.5; }
+    .estado {
+      display: inline-block;
+      margin: 2rem 0 0;
+      padding-top: 0.8rem;
+      border-top: 2px solid var(--oro-viejo);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    @media (max-width: 48rem) {
+      .portada { max-width: 35rem; grid-template-columns: minmax(0, 1fr); }
+    }
   </style>
 </head>
 <body>
   <main>
-    <h1><span>Restauración</span> <span>Española</span></h1>
-    <p>Próximamente</p>
+    <div class="portada">
+      <div class="marca">
+        <img src="./logotipo.png" alt="" width="512" height="341">
+      </div>
+      <div>
+        <h1>Restauración Española</h1>
+        <p class="lema">Tradición, patria y bien común</p>
+        <p class="estado">Próximamente</p>
+      </div>
+    </div>
   </main>
 </body>
 </html>
