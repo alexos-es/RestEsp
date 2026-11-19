@@ -1,0 +1,35 @@
+:root { color:#292a28; background:#fff; font:1rem/1.65 Arial,sans-serif; --oro:#c5a15b; }
+* { box-sizing:border-box; }
+body { margin:0; min-height:100vh; min-height:100svh; display:flex; flex-direction:column; }
+a { color:inherit; text-underline-offset:.24em; }
+a:focus-visible { outline:2px solid var(--oro); outline-offset:4px; }
+.inicio { flex:1; display:grid; }
+.portada {
+  display:grid; align-content:end; align-items:end;
+  grid-template-columns:minmax(0,1fr) minmax(7rem,10rem); gap:2rem;
+  padding:clamp(2rem,8vw,6rem) max(1.5rem,calc((100% - 71rem)/2));
+  color:#fff; border-bottom:2px solid var(--oro);
+  background:linear-gradient(90deg,#1b1c1aef,#1b1c1a20),linear-gradient(0deg,#1b1c1acc,transparent 65%),url("./toledo.jpg") center 46%/cover no-repeat,#292a28;
+}
+.portada h1 {
+  max-width:12ch; margin:0; letter-spacing:-.045em;
+  font:400 clamp(2.7rem,8vw,7.2rem)/.98 Baskerville,"Palatino Linotype","Book Antiqua",Georgia,serif;
+}
+.portada h1::before { content:""; display:block; width:2.8rem; height:2px; margin-bottom:1.25rem; background:var(--oro); }
+.lema { margin:1.2rem 0 0; font-size:clamp(1rem,2vw,1.2rem); }
+.emblema { padding:.65rem; background:#292a28d9; }
+.emblema img { width:100%; height:auto; display:block; }
+.pie { padding:.85rem 1.5rem; background:#fff; color:#575650; border-top:1px solid #ece9e2; }
+.pie nav { display:flex; flex-wrap:wrap; justify-content:center; gap:.25rem 1.25rem; font-size:.8125rem; }
+.pie a { padding:.25rem 0; text-decoration:none; }
+.pie a:hover { text-decoration:underline; }
+.contenido { flex:1; width:min(calc(100% - 3rem),46rem); margin:auto; padding-block:clamp(2rem,7vw,5.5rem); overflow-wrap:anywhere; }
+.volver { display:inline-block; margin-bottom:1.8rem; font-size:.875rem; }
+.contenido h1 { margin:0 0 1.2rem; font:400 clamp(2rem,5vw,3.8rem)/1.1 Georgia,serif; }
+.contenido h2 { margin-top:2rem; font-size:1.15rem; }
+dt { font-weight:700; }
+dd { margin:0 0 .75rem; }
+@media(max-width:42rem) {
+ .portada { grid-template-columns:1fr; gap:1.4rem; background-position:center,center,58% center; }
+ .emblema { width:7rem; }
+}
