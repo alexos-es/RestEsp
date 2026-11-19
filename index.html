@@ -1,8 +1,43 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Restauración Española</title><link rel="stylesheet" href="./estilos-minimal.css"></head><body><main class='inicio'><section class="portada" aria-labelledby="titulo">
-      <div>
-        <h1 id="titulo">Restauración Española</h1>
-        <p class="lema">Tradición, patria y bien común</p>
-        
-      </div>
-      <div class="emblema"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 132" width="160" height="132" style="display:block;width:100%;height:auto" aria-hidden="true" focusable="false"><rect width="160" height="132" fill="#f6f1e4"/><path fill="#292a28" fill-rule="evenodd" d="M17 13h52c24 0 40 12 40 30 0 13-8 23-21 27l26 32c7 9 15 13 22 14v4h-34c-7 0-11-3-16-10L59 74h-4v26c0 11 2 14 10 16v4H16v-4c8-2 11-5 11-16V31c0-9-2-12-10-14zm38 8v44h6c16 0 25-8 25-22 0-13-8-22-23-22z"/><path fill="#aa151b" d="M99 16h45v10h-35c-3-4-6-7-10-10zm14 36h31v10h-37c3-3 5-7 6-10z"/><path fill="#f1bf00" d="M112 30h32v18h-30c1-6 0-12-2-18z"/></svg></div>
-    </section></main><footer class="pie"><nav aria-label="Enlaces del pie"><a href="./contacto.html">Contacto</a><a href="./aviso-legal.html">Aviso legal</a><a href="./privacidad.html">Privacidad</a><a href="./creditos.html">Créditos</a></nav></footer></body></html>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Restauración española</title>
+  <link rel="stylesheet" href="./estilos-minimal.css">
+  <style>
+    .portada-hero {
+      display:grid;
+      grid-template-rows:1fr auto 1fr;
+      min-height:100vh;
+      min-height:100svh;
+      color:#fff;
+      background:linear-gradient(180deg,#17161252,#171612a8 55%,#171612e6),#292a28 url("./toledo.jpg") center 46% / cover no-repeat;
+    }
+    .hero-contenido {
+      grid-row:2;
+      padding:clamp(1.5rem,5vh,3.5rem) 1rem;
+      text-align:center;
+    }
+    .hero-emblema { width:clamp(6rem,16vmin,11rem); margin:0 auto clamp(1rem,3vh,2rem); }
+    .hero-titulo {
+      margin:0;
+      font:700 clamp(1.95rem,6.55vw,6rem)/1.06 Georgia,"Times New Roman",serif;
+      letter-spacing:-.035em;
+      text-wrap:balance;
+    }
+    .hero-inicial { display:inline-block; width:.81em; height:.72em; vertical-align:baseline; fill:currentColor; }
+    .hero-contenido .lema { margin-top:.85rem; }
+    .portada-hero .pie { grid-row:3; align-self:end; color:inherit; background:transparent; border:0; padding-bottom:max(.85rem,env(safe-area-inset-bottom)); }
+    .portada-hero .pie a { display:inline-block; }
+  </style>
+</head>
+<body class="portada-hero">
+  <main class="hero-contenido" aria-labelledby="titulo">
+    <div class="hero-emblema"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 132" width="160" height="132" style="display:block;width:100%;height:auto" fill="#292a28" aria-hidden="true" focusable="false"><rect width="160" height="132" fill="#f6f1e4"/><path id="marca-r" fill-rule="evenodd" d="M17 13h52c24 0 40 12 40 30 0 13-8 23-21 27l26 32c7 9 15 13 22 14v4h-34c-7 0-11-3-16-10L59 74h-4v26c0 11 2 14 10 16v4H16v-4c8-2 11-5 11-16V31c0-9-2-12-10-14zm38 8v44h6c16 0 25-8 25-22 0-13-8-22-23-22z"/><path fill="#aa151b" d="M99 16h45v10h-35c-3-4-6-7-10-10zm14 36h31v10h-37c3-3 5-7 6-10z"/><path fill="#f1bf00" d="M112 30h32v18h-30c1-6 0-12-2-18z"/></svg></div>
+    <h1 id="titulo" class="hero-titulo" aria-label="Restauración española"><span aria-hidden="true"><svg class="hero-inicial" viewBox="16 13 120 107" focusable="false"><use href="#marca-r"/></svg>estauración española</span></h1>
+    <p class="lema">Tradición, patria y bien común</p>
+  </main>
+  <footer class="pie"><nav aria-label="Enlaces del pie"><a href="./contacto.html">Contacto</a><a href="./aviso-legal.html">Aviso legal</a><a href="./privacidad.html">Privacidad</a><a href="./creditos.html">Créditos</a></nav></footer>
+</body>
+</html>
